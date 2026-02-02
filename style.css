@@ -14,7 +14,7 @@ html, body {
 /* === BIG CLASSIC HEART (smaller) === */
 .big-heart {
   position: absolute;
-  top: 40%;                /* slightly above center */
+  top: 10%;                /* slightly above center */
   left: 50%;
   width: 40px;           /* much smaller */
   height: 40px;          /* square for perfect heart */
