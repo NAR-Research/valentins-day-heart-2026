@@ -14,14 +14,14 @@ html, body {
 /* === BIG CLASSIC HEART (smaller) === */
 .big-heart {
   position: absolute;
-  top: -10px;
+  top: 0;               /* adjust slightly */
   left: 50%;
-  width: 150px;   /* smaller desktop size */
-  height: 150px;
+  width: 80px;           /* smaller desktop size */
+  height: 80px;          /* square for heart shape */
   background: #B03995;
   transform: translateX(-50%) rotate(-45deg);
   animation: pulse 3s ease-in-out infinite;
-  filter: drop-shadow(0 0 25px #BB3DD4);
+  filter: drop-shadow(0 0 20px #BB3DD4);
   z-index: 10;
 }
 
@@ -29,20 +29,20 @@ html, body {
 .big-heart::after {
   content: "";
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 80px;           /* match big heart size */
+  height: 80px;          /* square for lobes */
   background: inherit;
   border-radius: 50%;
 }
 
 .big-heart::before {
-  top: -75px;
+  top: -40px;            /* half of height */
   left: 0;
 }
 
 .big-heart::after {
   top: 0;
-  left: 75px;
+  left: 40px;            /* half of width */
 }
 
 /* Pulse animation */
