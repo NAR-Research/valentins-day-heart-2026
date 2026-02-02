@@ -14,7 +14,7 @@ html, body {
 /* === BIG CLASSIC HEART (smaller) === */
 .big-heart {
   position: absolute;
-  top: 60%;                /* slightly above center */
+  top: 40%;                /* slightly above center */
   left: 50%;
   width: 40px;           /* much smaller */
   height: 40px;          /* square for perfect heart */
@@ -133,35 +133,35 @@ html, body {
 }
 
 @media (max-width: 480px) {
-  /* Smaller big heart for mobile */
+  /* Extra small big heart for mobile */
   .big-heart { 
-    width: 15vw;   /* smaller than before */
-    height: 15vw;  /* square for perfect heart */
+    width: 8vw;           /* much smaller */
+    height: 8vw;          /* square for perfect heart */
   }
   .big-heart::before { 
-    width: 15vw;
-    height: 15vw;
-    top: -7.5vw;   /* half of height */
+    width: 8vw;
+    height: 8vw;
+    top: -4vw;            /* half of height */
   }
   .big-heart::after { 
-    width: 15vw;
-    height: 15vw;
-    left: 7.5vw;   /* half of width */
+    width: 8vw;
+    height: 8vw;
+    left: 4vw;            /* half of width */
   }
 
   /* Tiny falling hearts */
   .heart { 
-    width: 0.1w; 
-    height: 0.1vw; 
+    width: 0.5vw; 
+    height: 0.5vw; 
   }
   .heart::before, .heart::after { 
-    width: 0.1vw; 
-    height: 0.1vw; 
+    width: 0.5vw; 
+    height: 0.5vw; 
   }
-   /* .heart::before { top: -0.5vw; } half of heart size */
-  /*.heart::after { left: 0.5vw; }    half of heart size */
+  .heart::before { top: -0.25vw; }   /* half of heart size */
+  .heart::after { left: 0.25vw; }    /* half of heart size */
 
   /* Floor height smaller for mobile */
-  /* .floor { height: 12vh; } */
+  /* .floor { height: 10vh; } */
 }
 
