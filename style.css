@@ -14,7 +14,7 @@ html, body {
 /* === BIG CLASSIC HEART (smaller) === */
 .big-heart {
   position: absolute;
-  top: 50%;                /* slightly above center */
+  top: 70%;                /* slightly above center */
   left: 50%;
   width: 60px;            /* smaller desktop size */
   height: 60px;           /* square for perfect heart */
@@ -100,9 +100,11 @@ html, body {
 @media (max-width: 768px) {
   /* Big heart - smaller for tablet */
   .big-heart { 
+    position: absolute;
+    top: 70%; 
     width: 12vw; 
     height: 12vw;
-    top: 70%;
+    
   }
 
   /* Pseudo-elements proportional to big heart */
@@ -136,9 +138,10 @@ html, body {
 @media (max-width: 480px) {
   /* Smaller big heart for mobile */
   .big-heart { 
+    position: absolute;
+    top: 70%; 
     width: 15vw;   /* smaller than before */
     height: 15vw;  /* square for perfect heart */
-    top: 70%;
   }
   .big-heart::before { 
     width: 15vw;
