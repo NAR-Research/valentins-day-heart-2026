@@ -1,0 +1,101 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #3b0000, #000);
+  font-family: sans-serif;
+}
+
+/* ❤️ Big heart */
+.big-heart {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  width: 240px;
+  height: 220px;
+  background: #7b1438;
+  transform: translateX(-50%) rotate(-45deg);
+  z-index: 10;
+}
+
+.big-heart::before,
+.big-heart::after {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 220px;
+  background: #7b1438;
+  border-radius: 50%;
+}
+
+.big-heart::before {
+  top: -120px;
+  left: 0;
+}
+
+.big-heart::after {
+  left: 120px;
+  top: 0;
+}
+
+/* 💕 Falling hearts container */
+#rain {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* 💖 Small hearts */
+.heart {
+  position: absolute;
+  top: -20px;
+  width: 14px;
+  height: 14px;
+  background: red;
+  transform: rotate(-45deg);
+  filter: drop-shadow(0 0 6px red);
+  animation: fall linear forwards;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -7px;
+  left: 0;
+}
+
+.heart::after {
+  left: 7px;
+  top: 0;
+}
+
+/* Falling animation */
+@keyframes fall {
+  from {
+    transform: translateY(0) rotate(-45deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100vh) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+/* 🪞 Reflection floor */
+.floor {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to top, rgba(255, 0, 0, 0.25), transparent);
+}
