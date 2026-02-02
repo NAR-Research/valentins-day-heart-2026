@@ -136,41 +136,42 @@ html, body {
 }
 
 @media (max-width: 480px) {
-  /* Extra tiny big heart for mobile */
+  /* Slightly bigger big heart for mobile */
   .big-heart { 
     position: absolute;
-    top: 35%;            /* adjust vertical position */
+    top: 35%;            
     left: 50%;
-    width: 6vw;          /* ultra small */
-    height: 6vw;         /* square for heart shape */
+    width: 8vw;          /* slightly bigger */
+    height: 8vw;         /* square for perfect heart */
     transform: translateX(-50%) rotate(-45deg);
   }
 
   .big-heart::before { 
-    width: 6vw;
-    height: 6vw;
-    top: -3vw;           /* half of height */
+    width: 8vw;
+    height: 8vw;
+    top: -4vw;           /* half of height */
     left: 0;
   }
   .big-heart::after { 
-    width: 6vw;
-    height: 6vw;
+    width: 8vw;
+    height: 8vw;
     top: 0;
-    left: 3vw;           /* half of width */
+    left: 4vw;           /* half of width */
   }
 
-  /* Tiny falling hearts */
+  /* Slightly bigger falling hearts */
   .heart { 
-    width: 0.3vw; 
-    height: 0.3vw; 
+    width: 0.5vw; 
+    height: 0.5vw; 
   }
   .heart::before, .heart::after { 
-    width: 0.3vw; 
-    height: 0.3vw; 
+    width: 0.5vw; 
+    height: 0.5vw; 
   }
-  .heart::before { top: -0.15vw; }   /* half of heart size */
-  .heart::after { left: 0.15vw; }    /* half of heart size */
+  .heart::before { top: -0.25vw; }   /* half of heart size */
+  .heart::after { left: 0.25vw; }    /* half of heart size */
 
-  /* Floor height smaller for mobile */
-  .floor { height: 8vh; }
+  /* Floor height slightly bigger */
+  .floor { height: 10vh; }
+}
 }
