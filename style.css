@@ -1,13 +1,20 @@
 html, body {
-  margin: 0; padding: 0; height: 100%; overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: auto;             /* no full 100% height */
+  min-height: 100vh;        /* ensures it fills the viewport */
+  overflow: hidden;
   background: radial-gradient(circle at top, white);
   font-family: system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;      /* vertically center the container */
 }
 
 /* === BIG CLASSIC HEART (smaller) === */
 .big-heart {
   position: absolute;
-  top: 80px;
+  top: 280px;
   left: 50%;
   width: 150px;   /* smaller desktop size */
   height: 150px;
@@ -91,69 +98,70 @@ html, body {
 
 /* === MEDIA QUERIES FOR MOBILE === */
 @media (max-width: 768px) {
-  /* Big heart - proportional */
+  /* Big heart - smaller for tablet */
   .big-heart { 
-    width: 15vw; 
-    height: 15vw; 
+    width: 12vw; 
+    height: 12vw; 
   }
 
   /* Pseudo-elements proportional to big heart */
   .big-heart::before, .big-heart::after { 
-    width: 15vw;    /* match big heart size */
-    height: 15vw;   /* square for perfect lobes */
+    width: 12vw;    /* match big heart size */
+    height: 12vw;   /* square for perfect lobes */
   }
   .big-heart::before { 
-    top: -7.5vw;    /* half of height */
+    top: -6vw;      /* half of height */
   }
   .big-heart::after { 
-    left: 7.5vw;    /* half of width */
+    left: 6vw;      /* half of width */
   }
 
   /* Falling hearts smaller and proportional */
   .heart { 
-    width: 2vw; 
-    height: 2vw; 
+    width: 1.5vw; 
+    height: 1.5vw; 
   }
   .heart::before, .heart::after { 
-    width: 2vw; 
-    height: 2vw; 
+    width: 1.5vw; 
+    height: 1.5vw; 
   }
-  .heart::before { top: -1vw; }   /* half of heart size */
-  .heart::after { left: 1vw; }    /* half of heart size */
+  .heart::before { top: -0.75vw; }   /* half of heart size */
+  .heart::after { left: 0.75vw; }    /* half of heart size */
 
-  /* Floor smaller */
-  /* .floor { height: 15vh; } */
+  /* Floor smaller for tablet */
+  /* .floor { height: 12vh; } */
 }
 
 @media (max-width: 480px) {
   /* Smaller big heart for mobile */
   .big-heart { 
-    width: 20vw;   /* reduced from 30vw */
-    height: 20vw;  /* keep square for heart shape */
+    width: 15vw;   /* smaller than before */
+    height: 15vw;  /* square for perfect heart */
   }
   .big-heart::before { 
-    width: 20vw;
-    height: 20vw;
-    top: -10vw;    /* half of height */
+    width: 15vw;
+    height: 15vw;
+    top: -7.5vw;   /* half of height */
   }
   .big-heart::after { 
-    width: 20vw;
-    height: 20vw;
-    left: 10vw;    /* half of width */
+    width: 15vw;
+    height: 15vw;
+    left: 7.5vw;   /* half of width */
   }
 
-  /* Smaller falling hearts */
+  /* Tiny falling hearts */
   .heart { 
-    width: 1vw; 
-    height: 1vw; 
+    width: 0.5vw; 
+    height: 0.5vw; 
   }
   .heart::before, .heart::after { 
-    width: 1vw; 
-    height: 1vw; 
+    width: 0.5vw; 
+    height: 0.5vw; 
   }
-  .heart::before { top: -1.5vw; }  /* half of heart size */
-  .heart::after { left: 1.5vw; }   /* half of heart size */
+   /* .heart::before { top: -0.5vw; } half of heart size */
+  /*.heart::after { left: 0.5vw; }    half of heart size */
 
-  /* Floor height smaller */
-  /* .floor { height: 15vh; } */
+  /* Floor height smaller for mobile */
+  /* .floor { height: 12vh; } */
 }
+
