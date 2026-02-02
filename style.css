@@ -101,7 +101,8 @@ html, body {
   /* Big heart - smaller for tablet */
   .big-heart { 
     width: 12vw; 
-    height: 12vw; 
+    height: 12vw;
+    top: 70%;
   }
 
   /* Pseudo-elements proportional to big heart */
@@ -137,6 +138,7 @@ html, body {
   .big-heart { 
     width: 15vw;   /* smaller than before */
     height: 15vw;  /* square for perfect heart */
+    top: 70%;
   }
   .big-heart::before { 
     width: 15vw;
