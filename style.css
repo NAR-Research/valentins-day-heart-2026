@@ -1,6 +1,6 @@
 html, body {
   margin: 0; padding: 0; height: 100%; overflow: hidden;
-  background: radial-gradient(circle at top, #2a0000, #000);
+  background: radial-gradient(circle at top, white);
   font-family: system-ui, sans-serif;
 }
 
@@ -11,10 +11,10 @@ html, body {
   left: 50%;
   width: 150px;   /* smaller desktop size */
   height: 150px;
-  background: #8b1538;
+  background: #B03995;
   transform: translateX(-50%) rotate(-45deg);
   animation: pulse 3s ease-in-out infinite;
-  filter: drop-shadow(0 0 25px rgba(255, 60, 120, 0.6));
+  filter: drop-shadow(0 0 25px #BB3DD4);
   z-index: 10;
 }
 
@@ -57,16 +57,16 @@ html, body {
   top: -20px;
   width: 10px;   /* smaller */
   height: 10px;  /* smaller */
-  background: red;
+  background: #B03995;
   transform: rotate(-45deg);
-  filter: drop-shadow(0 0 4px red);
+  filter: drop-shadow(0 0 4px #BB3DD4);
   animation: fall linear forwards;
 }
 
 .heart::before,
 .heart::after {
   content: "";
-  position: absolute;
+  /* position: absolute; */
   width: 10px;
   height: 10px;
   background: inherit;
@@ -86,12 +86,12 @@ html, body {
   bottom: 0;
   width: 100%;
   height: 120px;
-  background: linear-gradient(to top, rgba(255, 0, 0, 0.25), transparent);
+  background: linear-gradient(to top, #B03995, transparent);
 }
 
 /* === MEDIA QUERIES FOR MOBILE === */
 @media (max-width: 768px) {
-  .big-heart { width: 25vw; height: 25vw; }
+  .big-heart { width: 15vw; height: 15vw; }
   .big-heart::before, .big-heart::after { width: 25vw; height: 25vw; }
   .big-heart::before { top: -12.5vw; }
   .big-heart::after { left: 12.5vw; }
@@ -105,14 +105,34 @@ html, body {
 }
 
 @media (max-width: 480px) {
-  .big-heart { width: 30vw; height: 30vw; }
-  .big-heart::before { top: -15vw; }
-  .big-heart::after { left: 15vw; }
+  /* Smaller big heart for mobile */
+  .big-heart { 
+    width: 20vw;   /* reduced from 30vw */
+    height: 20vw;  /* keep square for heart shape */
+  }
+  .big-heart::before { 
+    width: 20vw;
+    height: 20vw;
+    top: -10vw;    /* half of height */
+  }
+  .big-heart::after { 
+    width: 20vw;
+    height: 20vw;
+    left: 10vw;    /* half of width */
+  }
 
-  .heart { width: 3vw; height: 3vw; }
-  .heart::before, .heart::after { width: 3vw; height: 3vw; }
-  .heart::before { top: -1.5vw; }
-  .heart::after { left: 1.5vw; }
+  /* Smaller falling hearts */
+  .heart { 
+    width: 3vw; 
+    height: 3vw; 
+  }
+  .heart::before, .heart::after { 
+    width: 3vw; 
+    height: 3vw; 
+  }
+  .heart::before { top: -1.5vw; }  /* half of heart size */
+  .heart::after { left: 1.5vw; }   /* half of heart size */
 
-  .floor { height: 20vh; }
+  /* Floor height smaller */
+  .floor { height: 15vh; }
 }
