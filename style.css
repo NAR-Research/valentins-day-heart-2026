@@ -1,4 +1,3 @@
-/* Reset and background */
 html, body {
   margin: 0; padding: 0; height: 100%; overflow: hidden;
   background: radial-gradient(circle at top, #2a0000, #000);
@@ -10,7 +9,7 @@ html, body {
   position: absolute;
   top: 280px;
   left: 50%;
-  width: 200px;
+  width: 200px;      /* fixed size for desktop */
   height: 200px;
   background: #8b1538;
   transform: translateX(-50%) rotate(-45deg);
@@ -19,6 +18,7 @@ html, body {
   z-index: 10;
 }
 
+/* Pseudo-elements for top lobes */
 .big-heart::before,
 .big-heart::after {
   content: "";
@@ -35,18 +35,14 @@ html, body {
 }
 
 .big-heart::after {
-  left: 100px;
   top: 0;
+  left: 100px;
 }
 
 /* Pulse animation */
 @keyframes pulse {
-  0%, 100% {
-    transform: translateX(-50%) rotate(-45deg) scale(1);
-  }
-  50% {
-    transform: translateX(-50%) rotate(-45deg) scale(1.08);
-  }
+  0%, 100% { transform: translateX(-50%) rotate(-45deg) scale(1); }
+  50%      { transform: translateX(-50%) rotate(-45deg) scale(1.08); }
 }
 
 /* === FALLING SMALL HEARTS === */
@@ -89,10 +85,7 @@ html, body {
 }
 
 @keyframes fall {
-  to {
-    transform: translateY(100vh) rotate(-45deg);
-    opacity: 0;
-  }
+  to { transform: translateY(100vh) rotate(-45deg); opacity: 0; }
 }
 
 /* === FLOOR REFLECTION === */
@@ -102,4 +95,48 @@ html, body {
   width: 100%;
   height: 140px;
   background: linear-gradient(to top, rgba(255, 0, 0, 0.25), transparent);
+}
+
+/* === MEDIA QUERIES FOR MOBILE === */
+@media (max-width: 768px) {
+  .big-heart {
+    width: 35vw;  /* scale down for tablet/mobile */
+    height: 35vw;
+  }
+  .big-heart::before,
+  .big-heart::after {
+    width: 35vw;
+    height: 35vw;
+  }
+  .big-heart::before { top: -17.5vw; }
+  .big-heart::after { left: 17.5vw; }
+
+  .heart {
+    width: 3vw;
+    height: 3vw;
+  }
+  .heart::before,
+  .heart::after {
+    width: 3vw;
+    height: 3vw;
+  }
+  .heart::before { top: -1.5vw; }
+  .heart::after { left: 1.5vw; }
+
+  .floor {
+    height: 20vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .big-heart { width: 40vw; height: 40vw; }
+  .big-heart::before { top: -20vw; }
+  .big-heart::after { left: 20vw; }
+
+  .heart { width: 4vw; height: 4vw; }
+  .heart::before, .heart::after { width: 4vw; height: 4vw; }
+  .heart::before { top: -2vw; }
+  .heart::after { left: 2vw; }
+
+  .floor { height: 25vh; }
 }
