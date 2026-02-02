@@ -14,7 +14,7 @@ html, body {
 /* === BIG CLASSIC HEART (smaller) === */
 .big-heart {
   position: absolute;
-  top: 280px;
+  top: 80px;
   left: 50%;
   width: 150px;   /* smaller desktop size */
   height: 150px;
@@ -151,12 +151,12 @@ html, body {
 
   /* Tiny falling hearts */
   .heart { 
-    width: 0.5vw; 
-    height: 0.5vw; 
+    width: 0.1w; 
+    height: 0.1vw; 
   }
   .heart::before, .heart::after { 
-    width: 0.5vw; 
-    height: 0.5vw; 
+    width: 0.1vw; 
+    height: 0.1vw; 
   }
    /* .heart::before { top: -0.5vw; } half of heart size */
   /*.heart::after { left: 0.5vw; }    half of heart size */
