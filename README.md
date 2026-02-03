@@ -7,4 +7,4 @@ Read the blog with data and more graphics:
 <img src="https://i.imgur.com/BFMBuUW.png" alt="National Association of REALTORS® logo" style="width: 20%; position: absolute; right: 35px">
 
 
-<span style="position: absolute; top: 50px">Chart by Jovi Dai/National Association of REALTORS®</span>
+<span style="position: absolute; top: 50px; font-size: 12px">Chart by Jovi Dai/National Association of REALTORS®</span>
